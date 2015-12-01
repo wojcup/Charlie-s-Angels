@@ -33,14 +33,18 @@
 			<?php } else { ?>
 			<!-- /col-wrap -->
 
-			<?php if($display_json==true){ ?>
+
 			
 			<div class="col-wrap">
 				<?php esc_attr_e( 'JSON - Feed', 'wp_admin_style' ); ?>
 				<div class="inside">
 					<p><strong>Below are your 20 most recent badges</strong></p>
 					<ul class="wptreehouse-badges">
-					<?php for( $i=0;$i<20; $i++){ ?>
+					<?php 
+					$total_badges = count( $wptreehouse_profile->{'badges'} );
+
+					for( $i = $total_badges - 1; $i >= $total_badges - 20; $i-- ){		
+					?>
 					<li>
 						<ul>
 							<li>
@@ -53,7 +57,7 @@
 										<?php echo $wptreehouse_profile->{'badges'}[$i]->{'name'}; ?></a>
 								</li>
 								<li class="wptreehouse-project-name">
-									<a href="<?php echo $wptreehouse_profile->{'badges'}[1]->{'courses'}[0]->{'url'}; ?>"><?php echo $wptreehouse_profile->{'badges'}[1]->{'courses'}[0]->{'title'}; ?></a>
+									<a href="<?php echo $wptreehouse_profile->{'badges'}[$i]->{'courses'}[1]->{'url'}; ?>"><?php echo $wptreehouse_profile->{'badges'}[$i]->{'courses'}[1]->{'title'}; ?></a>
 								</li>
 							<?php } else { ?>
 									<li class="wptreehouse-badge-name">
@@ -70,9 +74,9 @@
 				</div>
 
 			</div>
-							<?php } ?>
-			<!-- /col-wrap -->
 
+			<!-- /col-wrap -->
+			<?php  if($display_json==true){  ?>
 				<div class="col-wrap">
 					<?php esc_attr_e( 'JSON Feed', 'wp_admin_style' ); ?>
 					<div class="inside">
@@ -91,8 +95,8 @@
 				</div>
 
 			
-			<?php } ?>
-			
+			<?php  }  ?>
+		<?php } ?>
 		</div>
 		<!-- /col-right -->
 		<?php if(isset($wptreehouse_username)&&$wptreehouse_username!=''){ ?>
