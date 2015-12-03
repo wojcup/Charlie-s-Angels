@@ -1,23 +1,3 @@
-<style type="text/css">
-	
-	.wptreehouse-badge {
-		position: relative;
-	}
-
-	.wptreehouse-badge-info { 
-		display: none;
-		background: rgba(255,255,255,.9);
-		padding: 5px 10px;
-	}
-
-	.wptreehouse-badge:hover .wptreehouse-badge-info{
-		display: block;
-		position: absolute;				
-		top: 0 ;
-		right: 0;		
-	}
-	
-</style>
 
 <?php 		
 
@@ -57,13 +37,13 @@
 				
 				<p class="wptreehouse-badge-project">
 					<a href="<?php echo $wptreehouse_profile->{'badges'}[$i]->{'courses'}[1]->{'url'}; ?>">
-						<?php echo $wptreehouse_profile->{'badges'}[$i]->{'courses'}[1]->{'title'} ;?>
+						<?php echo $wptreehouse_profile->{'badges'}[$i]->{'courses'}[0]->{'title'} ;?>
 					</a>
 				</p>
 				<?php endif; ?>
 
 				<a href="http://teamtreehouse.com" alt="Team Treehouse | A Better Way to Learn Technology" class="wptreehouse-logo">
-					<img src="<?php echo plugins_url( 'wptreehouse-badges/images/treehouse-logo-demo.png' ); ?>" alt="Treehouse" />
+					<img src="<?php echo plugins_url( 'wptreehouse-badges/images/treehouse-logo.png' ); ?>" alt="Treehouse" />
 				</a>
 					
 				<span class="wptreehouse-tooltip bottom"></span>							

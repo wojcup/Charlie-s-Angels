@@ -2,6 +2,9 @@
     <Project name="Changel">
         <Folder name="Changel - pliki">
             <File name="widget-fields.php" />
+            <File name="front-end.php" />
+            <File name="options-page-wrapper.php" />
+            <File name="C:\xampp\htdocs\dashboard\docs\changel\wp-content\plugins\wptreehouse-badges\wptreehouse-badges.php" />
         </Folder>
     </Project>
 </NotepadPlus>

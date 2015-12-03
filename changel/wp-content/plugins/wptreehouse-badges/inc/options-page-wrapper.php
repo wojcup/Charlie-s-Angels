@@ -57,7 +57,7 @@
 										<?php echo $wptreehouse_profile->{'badges'}[$i]->{'name'}; ?></a>
 								</li>
 								<li class="wptreehouse-project-name">
-									<a href="<?php echo $wptreehouse_profile->{'badges'}[$i]->{'courses'}[1]->{'url'}; ?>"><?php echo $wptreehouse_profile->{'badges'}[$i]->{'courses'}[1]->{'title'}; ?></a>
+									<a href="<?php echo $wptreehouse_profile->{'badges'}[$i]->{'courses'}[1]->{'url'}; ?>"><?php echo $wptreehouse_profile->{'badges'}[$i]->{'courses'}[0]->{'title'}; ?></a>
 								</li>
 							<?php } else { ?>
 									<li class="wptreehouse-badge-name">
